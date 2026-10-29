@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hock-A-Loogie</title>
+<meta name="description" content="Stand on the roof. Spit on the street. A satirical arcade game for iPhone and the web: hold to hock, release to spit, and turn outrage into liberal tears.">
+<meta property="og:title" content="Hock-A-Loogie">
+<meta property="og:description" content="Stand on the roof. Spit on the street. Coming soon to iPhone and the web.">
+<meta property="og:image" content="art/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d2a4f">
+<link rel="icon" href="art/favicon.png">
+<link rel="apple-touch-icon" href="art/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800;900&family=Barlow:wght@400;500;600;700&family=Lilita+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script>
+  // Hold the entrance until the motion script runs (it removes this); a
+  // little later regardless, so nothing stays hidden if it never loads.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('motion');
+    setTimeout(() => document.documentElement.classList.remove('motion'), 2500);
+  }
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Back to the top"><img src="art/logo.webp" alt="" width="1257" height="596"></a>
+  <nav aria-label="Sections"><a href="#how">How to play</a><a href="#features">Features</a><a href="#faq">FAQ</a><a href="#soon" class="nav-cta">Coming soon</a></nav>
+</header>
+
+<div class="drop-layer" aria-hidden="true">
+  <span class="scroll-drop" id="scroll-drop"></span>
+  <span class="drop-splat" id="drop-splat"><svg viewBox="-60 -40 120 80"><path d="M-22-14c8-12 30-12 38-2 12-4 26 4 22 16 10 6 4 20-10 18-6 10-26 12-34 2-12 6-30 0-28-12-12-4-10-20 4-22-2-4 2-6 8 0z"/><circle cx="-44" cy="-14" r="5"/><circle cx="46" cy="-18" r="4"/><circle cx="40" cy="24" r="3.5"/><circle cx="-38" cy="22" r="4"/><ellipse class="hi" cx="-8" cy="-8" rx="10" ry="4.5" transform="rotate(-18)"/></svg></span>
+</div>
+
+<main>
+<section class="home-hero" id="top">
+  <div class="hh-bg" aria-hidden="true"><img src="art/home_bg.webp" alt="" fetchpriority="high"></div>
+  <div class="wrap hh-grid">
+    <div class="hh-copy">
+      <span class="pill">FROM THE TOP FLOOR</span>
+      <h1 class="hh-logo"><img src="art/logo.webp" alt="Hock-A-Loogie" width="1257" height="596"><span class="shine" aria-hidden="true"></span></h1>
+      <p class="tag">One rooftop. One street. <em>Unlimited&nbsp;spit.</em></p>
+      <p class="sub">Stand on the ledge, hock a loogie on the people below and turn their outrage into liberal tears.</p>
+      <div class="cta-row">
+        <a class="btn btn-yellow" href="#soon"><svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg>Coming to iPhone</a>
+        <a class="btn btn-cream" href="#how">How it plays</a>
+      </div>
+    </div>
+    <div class="hh-phones">
+      <figure class="phone p-title"><div class="phone-body"><img src="media/title-screen.webp" alt="The game's title screen" width="480" height="1040"><div class="phone-island"></div></div></figure>
+      <figure class="phone p-play"><div class="phone-body"><video src="media/gameplay.mp4" poster="media/gameplay-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Gameplay"></video><div class="phone-island"></div></div></figure>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#how" aria-label="Scroll down"><span></span></a>
+</section>
+
+<div class="ticker" aria-label="Headlines from The Daily Poost">
+  <div class="band band-a"><span class="tag-fnn">FNN<i>BREAKING</i></span><div class="track" id="track-a"></div></div>
+  <div class="band band-b" aria-hidden="true"><div class="track" id="track-b"></div></div>
+</div>
+
+<section id="how" class="sec sec-sky">
+  <div class="wrap">
+    <p class="kicker">HOW TO PLAY</p>
+    <h2 class="h2 split">Three moves. <span class="hl">Zero shame.</span></h2>
+    <ol class="steps">
+      <li class="step"><div class="step-art art-aim"><span class="ring"></span><span class="drag"></span></div><h3>AIM</h3><p>Drag a thumb like a trackpad. The reticle follows along the street below.</p></li>
+      <li class="step"><div class="step-art art-hold"><svg viewBox="0 0 80 80"><path class="t" d="M14 66 A52 52 0 0 1 66 14"/><path class="f" d="M14 66 A52 52 0 0 1 66 14"/></svg></div><h3>HOLD</h3><p>Hock it up. The longer you hold, the further it flies: pavement, road, park.</p></li>
+      <li class="step"><div class="step-art art-release"><span class="blob"></span><span class="splash"></span></div><h3>RELEASE</h3><p>Let it fly and lead the walkers. Reach the level's target or it's over.</p></li>
+    </ol>
+    <ul class="rules">
+      <li><b>x2</b> combo at six in a row</li>
+      <li><b>x1.25</b> headshots</li>
+      <li><b>WANTED</b> bounties</li>
+      <li><b>−2 s</b> for friendly fire</li>
+      <li><b>Buzzer-beaters</b> still score</li>
+    </ul>
+  </div>
+</section>
+
+<section class="stats" aria-label="The game in numbers">
+  <div class="stats-bg" aria-hidden="true"><img src="art/head_how.webp" alt="" loading="lazy"></div>
+  <div class="wrap stats-row">
+    <div class="stat"><b data-count="27">27</b><span>characters on the street</span></div>
+    <div class="stat"><b data-count="39">39</b><span>joke-named trophies</span></div>
+    <div class="stat"><b data-count="14">14</b><span>ranks, intern to emperor</span></div>
+    <div class="stat"><b data-count="0">0</b><span>lives, retries or excuses</span></div>
+  </div>
+</section>
+
+<section id="features" class="sec sec-cream">
+  <div class="wrap">
+    <p class="kicker">FEATURES</p>
+    <h2 class="h2 split">Every spit <span class="hl">counts.</span></h2>
+    <div class="feat-grid">
+      <article class="feat"><div class="feat-img"><img src="art/feat_wanted.webp" alt="" width="480" height="600" loading="lazy"></div><h3>WANTED bounties</h3><p>Now and then someone on the street gets marked. Soak them before they get away and the bounty pays double.</p></article>
+      <article class="feat"><div class="feat-img"><img src="art/feat_combo.webp" alt="" width="480" height="600" loading="lazy"></div><h3>Combos and green spit</h3><p>Hit six in a row and your points double. Earn a green spit and it splashes wide.</p></article>
+      <article class="feat"><div class="feat-img"><img src="art/feat_level.webp" alt="" width="480" height="600" loading="lazy"></div><h3>A new face every level</h3><p>Each level has a target score and one newcomer. Miss the target and it's over: no lives, no retries.</p></article>
+      <article class="feat"><div class="feat-img"><img src="art/feat_poost.webp" alt="" width="480" height="600" loading="lazy"></div><h3>The Daily Poost</h3><p>Your best hit of the game makes the front page, headline and all.</p></article>
+      <article class="feat"><div class="feat-img"><img src="art/feat_orders.webp" alt="" width="480" height="600" loading="lazy"></div><h3>Executive Orders</h3><p>Three standing orders carry over from game to game. Sign them off for XP and climb from Intern to Emperor of the Rooftop.</p></article>
+      <article class="feat"><div class="feat-img"><img src="art/feat_trophies.webp" alt="" width="480" height="600" loading="lazy"></div><h3>Thirty-nine trophies</h3><p>Joke-named and counted for life: COVFEFE, BIGLY, SAD!, STABLE GENIUS and the rest.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="sec sec-sky">
+  <div class="wrap faq-wrap">
+    <div>
+      <p class="kicker">FAQ</p>
+      <h2 class="h2 split">Fair <span class="hl">questions.</span></h2>
+    </div>
+    <div class="faq">
+      <details><summary>Where can I play it?</summary><div class="faq-a"><p>On iPhone and in the browser. Both are coming soon.</p></div></details>
+      <details><summary>When does it come out?</summary><div class="faq-a"><p>Soon. It's in play-testing right now, one spit at a time.</p></div></details>
+      <details><summary>Is that really his voice?</summary><div class="faq-a"><p>No. He's voiced by an impressionist who agreed to it. No real politician's voice was cloned.</p></div></details>
+      <details><summary>Who's on the street?</summary><div class="faq-a"><p>Archetypes, not portraits: Karens, streamers, robotaxis, a news crew and a pigeon. Some are on your side, and soaking them costs you time.</p></div></details>
+      <details><summary>Is there music?</summary><div class="faq-a"><p>No background music. Just the street, the splats and the shouting.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="soon" id="soon">
+  <div class="wrap soon-grid">
+    <div class="soon-icon"><div class="tile"><img src="art/icon.webp" alt="The Hock-A-Loogie app icon" width="512" height="512" loading="lazy"></div></div>
+    <div class="soon-copy">
+      <p class="kicker light">COMING SOON</p>
+      <h2 class="soon-head">The street won't<br><span id="soak">soak itself.</span></h2>
+      <div class="cta-row">
+        <span class="store"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18.5h4"/></svg><span><small>Coming soon to</small>iPhone</span></span>
+        <span class="store"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><span><small>Play it in your</small>Browser</span></span>
+      </div>
+      <div class="share-row">
+        <button class="btn btn-cream btn-small" id="share" type="button"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span>Send it to someone who deserves it</span></button>
+        <a class="press-link" href="press/hock-a-loogie-press-kit.zip" download>Press kit <small>logo, icon, screenshots · ZIP</small></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <img class="foot-logo" src="art/logo.webp" alt="Hock-A-Loogie" width="1257" height="596" loading="lazy">
+    <div>
+      <p>Hock-A-Loogie is satire. Everyone on the street is an archetype, not a portrait. No real politician's voice was cloned for this game. FNN is a parody network, and so is everything else.</p>
+      <nav class="foot-links" aria-label="Pages"><a href="privacy/">Privacy</a><a href="support/">Support</a></nav>
+      <p class="small">© 2026 Monkey Sandwich Studio · No background music, as promised.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script type="module" src="js/site.js"></script>
+</body>
+</html>
